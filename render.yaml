@@ -21,10 +21,3 @@ services:
     autoDeploy: true
     branch: main
     rootDir: backend
-    disk:
-      name: data
-      mountPath: /app/data
-      sizeGB: 1
-    scaling:
-      minInstances: 1
-      maxInstances: 1
