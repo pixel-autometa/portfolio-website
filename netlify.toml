@@ -1,0 +1,17 @@
+# Netlify config for a static frontend
+[build]
+  publish = "frontend"
+  command = ""
+
+# Caching for faster loads
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+# Security headers (basic)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
